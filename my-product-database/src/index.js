@@ -74,7 +74,7 @@ document.querySelector('body').onclick = function(event) {
         document.querySelector('.addBtn').classList.remove('off');
     }
     if (event.target === document.querySelector('.getAllProducts')) {
-        if (products.length < 1) {
+        if (products === null) {
             return;
         }
         document.querySelector('.products').innerHTML = '';
@@ -167,8 +167,12 @@ document.querySelector('body').oninput = function(event) {
 };
 
 document.querySelector('body').onkeydown = function(event) {
-    const products = JSON.parse(localStorage.getItem('products'));
+    products = JSON.parse(localStorage.getItem('products'));
     if (event.key === 'Enter') {
+        if (products === null) {
+            document.querySelector('.queryId').value = '';
+            return;
+        }
         const findProduct = products.filter(
             product => productArticle === product.article,
         );
