@@ -12,7 +12,8 @@ document.querySelector('body').onclick = function(event) {
     products = JSON.parse(localStorage.getItem('products'));
     if (event.target === document.querySelector('.addBtn')) {
         event.target.classList.add('off');
-        document.querySelector('.products').innerHTML = addProduct();
+        const murkup = addProduct();
+        document.querySelector('.products').insertAdjacentHTML('beforeend', murkup);
     }
     if (
         event.target ===
