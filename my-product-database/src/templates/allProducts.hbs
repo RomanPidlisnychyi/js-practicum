@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td>article:</td>
+        <td>name:</td>
+        <td>count:</td>
+        <td>services:</td>
+    </tr>
+    {{#each this}}
+    <tr>
+        <td>{{article}}</td>
+        <td>{{name}}</td>
+        <td><input type="text" value="{{count}}" name="count-{{name}}" class="count" placeholder="{{count}}" /></td>
+        {{!-- <td><button class="save" data-id="{{index}}" data-count="{{count}}" title="save-{{name}}" disabled>Save</button>
+        <button class="delete" data-id="{{index}}" title="delete-{{name}}">Delete</button></td> --}}
+        <td><button class="save" data-id="{{article}}" data-count="{{count}}" title="save-{{name}}" disabled>Save</button>
+        <button class="delete" data-id="{{article}}" title="delete-{{name}}">Delete</button></td>
+
+    </tr>
+    {{/each}}
+</table>

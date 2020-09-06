@@ -1,0 +1,34 @@
+<li class="wrapper" data-name="{{name}}">
+    <button class="close" data-close="{{name}}">x</button>
+    <div class="img_wrap">
+        <img class="img" src="{{img}}" alt="" width="135px" />
+        <input type="file" id="file" multiple />
+    </div>
+        <table>
+        <tr>
+            <td>product name:</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td>article:</td>
+            <td>{{article}}</td>
+        </tr>
+        <tr>
+            <td>count:</td>
+            <td><input type="text" name="count-{{name}}" class="count" value="{{count}}" placeholder="{{count}}" /></td>
+        </tr>
+    </table>
+
+    {{!-- <div class="content-wrap">
+        <p>product name:</p>
+        <p>article:</p>
+        <p>count:</p>
+    </div>
+    <div class="content-wrap">
+        <p>{{name}}</p>
+        <p>{{article}}</p>
+        <p><input type="text" name="count-{{name}}" class="count" value="{{count}}" placeholder="{{count}}" /></p>
+    </div> --}}
+        <button class="save" data-id="{{index}}" data-count="{{count}}" title="save-{{name}}" disabled>Save</button>
+        <button class="delete" data-id="{{index}}" title="delete-{{name}}">Delete</button>
+</li>
